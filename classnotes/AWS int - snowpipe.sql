@@ -51,7 +51,6 @@ FROM @OUR_FIRST_DB.PUBLIC.vitech_netflix_stage
 FILE_FORMAT = OUR_FIRST_DB.PUBLIC.csv_format
 ON_ERROR = 'CONTINUE';
 
-
 -- Step 8: Query the table to verify data was loaded successfully
 select * from OUR_FIRST_DB.PUBLIC.netflix_data;
 
@@ -81,8 +80,6 @@ select * from OUR_FIRST_DB.PUBLIC.netflix_data;
 -- Step 14: Check the current status of the pipe (pending files, execution state, last ingested timestamp)
 SELECT SYSTEM$PIPE_STATUS('OUR_FIRST_DB.SNOWPIPE.NETFLIX_PIPE');
 
-
-
 -- Step 15: Pause the pipe to stop auto-ingestion
 ALTER PIPE OUR_FIRST_DB.SNOWPIPE.NETFLIX_PIPE SET PIPE_EXECUTION_PAUSED = TRUE;
 
@@ -102,4 +99,6 @@ SELECT SYSTEM$PIPE_STATUS('OUR_FIRST_DB.SNOWPIPE.NETFLIX_PIPE');
 --- load employee-1 csv data into snowflake ... modify the same file add 10 rows and upload into s3 
    -- try to load data and observer ???  10 --> inserted or not or toal ??
    --delete 50 records from csv file and load the same file into s3 and observe 
+
+   create  table employee ( id int , address string);
 
