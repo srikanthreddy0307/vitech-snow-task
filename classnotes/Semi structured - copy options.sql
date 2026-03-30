@@ -2,11 +2,9 @@
   from @OUR_FIRST_DB.stage.LOAN_PAYMENT_stage_v1 
   pattern = '.*Loan.*.csv' 
   force= true ;
-  
 
 
-
-  ---orders -- 200/500
+  ---orders -- 200/500/1000
 --
 
 CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.LOAN_PAYMENT_v6 (
