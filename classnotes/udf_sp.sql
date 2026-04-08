@@ -89,8 +89,6 @@ CALL VITECH_DEV.PUBLIC.MARK_INACTIVE(2);
 
 SELECT * FROM VITECH_DEV.PUBLIC.EMPLOYEE;
 
----
-
 ----write stored procedure to delete inactive employees every day 
 
 --Bank example 
@@ -100,7 +98,3 @@ SELECT * FROM VITECH_DEV.PUBLIC.EMPLOYEE;
 --Deposit amount based on account number , amount  (if customer exist only , if not throw an error msg)
 --wihtdraw amount based on account number , amount  (if customer exist only , if not throw an error msg ,check balance sufficent /in)
 --Dispaly all customers based on branch ..here use curosr (open , fetch ,close )
-
-
-
-
